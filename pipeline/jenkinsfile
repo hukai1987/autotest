@@ -1,7 +1,7 @@
 node {
     //def mvnHome
     stage('checkout') { // for display purposes
-        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'e7e54d66-95eb-4f5a-a27b-8f25f9e2129e', url: 'git@github.com:hukai1987/autotest.git']]])
+        checkout([$class: 'GitSCM', branches: [[name: '${branch}']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'e7e54d66-95eb-4f5a-a27b-8f25f9e2129e', url: 'git@github.com:hukai1987/autotest.git']]])
     }
     stage('buuild') {
         echo "Building..."
