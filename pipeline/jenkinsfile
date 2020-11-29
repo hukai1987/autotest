@@ -5,7 +5,7 @@ node {
     }
     stage('buuild') {
         echo "Building..."
-	echo ${BUILD_URL}
+	//echo ${BUILD_URL}
 	timestamps()
     }
     stage('deploy') {
